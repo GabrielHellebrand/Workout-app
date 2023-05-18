@@ -1,0 +1,85 @@
+    <!DOCTYPE html>
+<html ng-app="excelApp">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="excelController">
+  <form>
+    <!-- Prompt for today's date -->
+    <label for="date">Today's Date:</label>
+    <input type="date" id="date" ng-model="data.date" required><br>
+
+    <!-- Prompt for caloric goals -->
+    <label for="caloricGoals">Caloric Goals:</label>
+    <input type="text" id="caloricGoals" ng-model="data.caloricGoals" required><br>
+
+    <!-- Prompt for breakfast -->
+    <label for="breakfast">Breakfast:</label>
+    <input type="text" id="breakfast" ng-model="data.breakfast" required>
+    <label for="breakfastCalories">Calories:</label>
+    <input type="number" id="breakfastCalories" ng-model="data.breakfastCalories" required><br>
+
+    <!-- Prompt for lunch -->
+    <label for="lunch">Lunch:</label>
+    <input type="text" id="lunch" ng-model="data.lunch" required>
+    <label for="lunchCalories">Calories:</label>
+    <input type="number" id="lunchCalories" ng-model="data.lunchCalories" required><br>
+
+    <!-- Prompt for dinner -->
+    <label for="dinner">Dinner:</label>
+    <input type="text" id="dinner" ng-model="data.dinner" required>
+    <label for="dinnerCalories">Calories:</label>
+    <input type="number" id="dinnerCalories" ng-model="data.dinnerCalories" required><br>
+
+    <!-- Prompt for snack -->
+    <label for="snack">Snack:</label>
+    <input type="text" id="snack" ng-model="data.snack" required>
+    <label for="snackCalories">Calories:</label>
+    <input type="number" id="snackCalories" ng-model="data.snackCalories" required><br>
+
+    <!-- Prompt for total calories-->
+    <label for="totalCalories">Total Calories:</label>
+    <input type="text" id="totalCalories" ng-model="data.totalCalories" required><br>
+    
+    <!--Prompt if the user brushed there teeth-->
+    <label for="brushTeethToday">Did you brush your teeth this morning and evening?</label>
+    <input type="checkbox" id="brushTeethToday" ng-model="data.brushTeethToday"><br>
+    
+    <!--Prompt if the user showered today-->
+    <label for="showeredToday">Did you shower today?</label>
+    <input type="checkbox" id="showeredToday" ng-model="data.showeredToday"><br>
+
+    <!--Prompt if the user shaved today-->
+    <label for="shavedToday">Did you shave today?</label>
+    <input type="checkbox" id="shavedToday" ng-model="data.shavedToday"><br>
+
+    <!--Prompt if the user made there bed today-->
+    <label for="madeBedToday">Did you make your bed today?</label>
+    <input type="checkbox" id="madeBedToday" ng-model="data.madeBedToday"><br>
+
+    <!--Prompt if the user's room is clean-->
+    <label for="cleanRoomToday">Is your room clean?</label>
+    <input type="checkbox" id="cleanRoomToday" ng-model="data.cleanRoomToday"><br>
+
+    <!-- Prompt for workout routine -->
+    <label for="workout">Workout Routine:</label>
+    <textarea id="workout" ng-model="data.workout" required></textarea><br>
+    <label for="workoutToday">Did you work out today?</label>
+    <input type="checkbox" id="workoutToday" ng-model="data.workoutToday"><br>
+
+    <!--Prompt if the user saved the world-->
+    <label for="savedWorldToday">Did you save the world today?</label>
+    <input type="checkbox" id="savedWorldToday" ng-model="data.savedWorldToday"><br>
+
+    <!-- Save button -->
+    <button type="button" ng-click="saveData()">Save</button>
+  </form>
+</body>
+
+</html>
+</body>
+</html>
